@@ -1,7 +1,7 @@
-import React from 'react'
+"use client";
 
-export default function layout({ children }) {
-  return (
-    <div>{children}</div>
-  )
+import Sidebar from '../../components/app/sidebar';
+
+export default function Layout({ children }) {
+  return <Sidebar>{children}</Sidebar>;
 }
