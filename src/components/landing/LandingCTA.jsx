@@ -18,7 +18,7 @@ export default function LandingCTA() {
       className="py-20 md:py-28 relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(160deg, oklch(var(--landing-ink-950)) 0%, oklch(var(--landing-ink-800)) 55%, oklch(var(--landing-ink-700)) 100%)",
+          "linear-gradient(160deg, oklch(var(--ink-950)) 0%, oklch(var(--ink-800)) 55%, oklch(var(--ink-700)) 100%)",
       }}
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -28,7 +28,7 @@ export default function LandingCTA() {
               <path
                 d="M 48 0 L 0 0 0 48"
                 fill="none"
-                stroke="oklch(var(--landing-white))"
+                stroke="oklch(var(--color-white))"
                 strokeWidth="0.5"
               />
             </pattern>
@@ -38,14 +38,14 @@ export default function LandingCTA() {
         <div
           className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-[0.1]"
           style={{
-            background: "radial-gradient(circle, oklch(var(--landing-blue-500)), transparent)",
+            background: "radial-gradient(circle, oklch(var(--color-blue-500)), transparent)",
             filter: "blur(60px)",
           }}
         />
         <div
           className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full opacity-[0.08]"
           style={{
-            background: "radial-gradient(circle, oklch(var(--landing-violet-400)), transparent)",
+            background: "radial-gradient(circle, oklch(var(--color-violet-400)), transparent)",
             filter: "blur(50px)",
           }}
         />
@@ -63,8 +63,8 @@ export default function LandingCTA() {
             className="w-16 h-16 rounded-3xl flex items-center justify-center"
             style={{
               background:
-                "linear-gradient(135deg, oklch(var(--landing-blue-500)), oklch(var(--landing-blue-700)))",
-              boxShadow: "0 12px 36px oklch(var(--landing-blue-500) / 0.45)",
+                "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
+              boxShadow: "0 12px 36px oklch(var(--color-blue-500) / 0.45)",
             }}
           >
             <LandingIcon size={30} className="text-white" />
@@ -83,7 +83,7 @@ export default function LandingCTA() {
           <span
             style={{
               background:
-                "linear-gradient(90deg, oklch(var(--landing-blue-400)), oklch(var(--landing-indigo-400)))",
+                "linear-gradient(90deg, oklch(var(--color-blue-400)), oklch(var(--color-indigo-400)))",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -99,7 +99,7 @@ export default function LandingCTA() {
           transition={{ duration: 0.48, delay: 0.14 }}
           className="mt-5 mx-auto"
           style={{
-            color: "oklch(var(--landing-slate-400) / 0.9)",
+            color: "oklch(var(--color-slate-400) / 0.9)",
             fontSize: "1rem",
             lineHeight: 1.75,
             maxWidth: "520px",
@@ -118,8 +118,8 @@ export default function LandingCTA() {
         >
           {CTA_PERKS.map((p) => (
             <div key={p} className="flex items-center gap-2">
-              <LuCheck size={15} style={{ color: "oklch(var(--landing-green-400))", flexShrink: 0 }} />
-              <span style={{ fontSize: "0.85rem", color: "oklch(var(--landing-slate-300) / 0.8)" }}>{p}</span>
+              <LuCheck size={15} style={{ color: "oklch(var(--color-green-400))", flexShrink: 0 }} />
+              <span style={{ fontSize: "0.85rem", color: "oklch(var(--color-slate-300) / 0.8)" }}>{p}</span>
             </div>
           ))}
         </motion.div>
@@ -136,8 +136,8 @@ export default function LandingCTA() {
             className="flex items-center gap-2.5 px-8 py-4 rounded-2xl text-white transition-all hover:scale-105 hover:opacity-95 w-full sm:w-auto justify-center"
             style={{
               background:
-                "linear-gradient(135deg, oklch(var(--landing-blue-500)), oklch(var(--landing-blue-700)))",
-              boxShadow: "0 10px 30px oklch(var(--landing-blue-500) / 0.5)",
+                "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
+              boxShadow: "0 10px 30px oklch(var(--color-blue-500) / 0.5)",
               fontSize: "0.97rem",
               fontWeight: 700,
             }}
@@ -148,14 +148,14 @@ export default function LandingCTA() {
             href="/login"
             className="flex items-center gap-2.5 px-8 py-4 rounded-2xl transition-all hover:bg-white/12 w-full sm:w-auto justify-center"
             style={{
-              border: "1.5px solid oklch(var(--landing-white) / 0.18)",
-              backgroundColor: "oklch(var(--landing-white) / 0.06)",
-              color: "oklch(var(--landing-slate-200) / 0.9)",
+              border: "1.5px solid oklch(var(--color-white) / 0.18)",
+              backgroundColor: "oklch(var(--color-white) / 0.06)",
+              color: "oklch(var(--color-slate-200) / 0.9)",
               fontSize: "0.97rem",
               fontWeight: 600,
             }}
           >
-            <LuLogIn size={16} style={{ color: "oklch(var(--landing-slate-200) / 0.9)" }} /> Sudah punya akun? Masuk
+            <LuLogIn size={16} style={{ color: "oklch(var(--color-slate-200) / 0.9)" }} /> Sudah punya akun? Masuk
           </Link>
         </motion.div>
 
@@ -167,14 +167,14 @@ export default function LandingCTA() {
           className="mt-6"
           style={{
             fontSize: "0.75rem",
-            color: "oklch(var(--landing-slate-400) / 0.5)",
+            color: "oklch(var(--color-slate-400) / 0.5)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             gap: "6px",
           }}
         >
-          <LuLock size={12} style={{ color: "oklch(var(--landing-slate-400) / 0.6)" }} />
+          <LuLock size={12} style={{ color: "oklch(var(--color-slate-400) / 0.6)" }} />
           Data Anda aman dan terenkripsi · Tidak ada spam · Bisa batalkan kapan saja
         </motion.p>
       </div>

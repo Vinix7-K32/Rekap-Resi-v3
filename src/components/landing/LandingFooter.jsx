@@ -57,7 +57,7 @@ export default function LandingFooter() {
   return (
     <footer
       style={{
-        background: "linear-gradient(180deg, oklch(var(--landing-ink-900)) 0%, oklch(var(--landing-ink-950)) 100%)",
+        background: "linear-gradient(180deg, oklch(var(--ink-900)) 0%, oklch(var(--ink-950)) 100%)",
       }}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 pb-10">
@@ -68,8 +68,8 @@ export default function LandingFooter() {
                 className="w-10 h-10 rounded-xl flex items-center justify-center"
                 style={{
                   background:
-                    "linear-gradient(135deg, oklch(var(--landing-blue-500)), oklch(var(--landing-blue-700)))",
-                  boxShadow: "0 4px 12px oklch(var(--landing-blue-500) / 0.35)",
+                    "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
+                  boxShadow: "0 4px 12px oklch(var(--color-blue-500) / 0.35)",
                 }}
               >
                 <LandingIcon size={20} className="text-white" />
@@ -85,7 +85,7 @@ export default function LandingFooter() {
             <p
               style={{
                 fontSize: "0.84rem",
-                color: "oklch(var(--landing-slate-400) / 0.75)",
+                color: "oklch(var(--color-slate-400) / 0.75)",
                 lineHeight: 1.72,
                 marginBottom: "18px",
               }}
@@ -95,14 +95,14 @@ export default function LandingFooter() {
 
             <div className="space-y-2.5">
               <div className="flex items-center gap-2.5">
-                <LuMail size={13} style={{ color: "oklch(var(--landing-blue-400))", flexShrink: 0 }} />
-                <span style={{ fontSize: "0.8rem", color: "oklch(var(--landing-slate-400) / 0.7)" }}>
+                <LuMail size={13} style={{ color: "oklch(var(--color-blue-400))", flexShrink: 0 }} />
+                <span style={{ fontSize: "0.8rem", color: "oklch(var(--color-slate-400) / 0.7)" }}>
                   hello@rekapresi.id
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <LuMapPin size={13} style={{ color: "oklch(var(--landing-blue-400))", flexShrink: 0 }} />
-                <span style={{ fontSize: "0.8rem", color: "oklch(var(--landing-slate-400) / 0.7)" }}>
+                <LuMapPin size={13} style={{ color: "oklch(var(--color-blue-400))", flexShrink: 0 }} />
+                <span style={{ fontSize: "0.8rem", color: "oklch(var(--color-slate-400) / 0.7)" }}>
                   Jakarta, Indonesia
                 </span>
               </div>
@@ -115,9 +115,9 @@ export default function LandingFooter() {
                   style={{
                     fontSize: "0.62rem",
                     fontWeight: 600,
-                    color: "oklch(var(--landing-slate-400) / 0.6)",
-                    backgroundColor: "oklch(var(--landing-white) / 0.05)",
-                    border: "1px solid oklch(var(--landing-white) / 0.07)",
+                    color: "oklch(var(--color-slate-400) / 0.6)",
+                    backgroundColor: "oklch(var(--color-white) / 0.05)",
+                    border: "1px solid oklch(var(--color-white) / 0.07)",
                     padding: "2px 8px",
                     borderRadius: "999px",
                   }}
@@ -134,7 +134,7 @@ export default function LandingFooter() {
                 style={{
                   fontSize: "0.7rem",
                   fontWeight: 700,
-                  color: "oklch(var(--landing-slate-400) / 0.5)",
+                  color: "oklch(var(--color-slate-400) / 0.5)",
                   letterSpacing: "0.08em",
                   marginBottom: "14px",
                 }}
@@ -148,7 +148,7 @@ export default function LandingFooter() {
                       <button
                         onClick={() => handleAnchor(link.href)}
                         className="transition-colors hover:text-white"
-                        style={{ fontSize: "0.83rem", color: "oklch(var(--landing-slate-400) / 0.7)", textAlign: "left" }}
+                        style={{ fontSize: "0.83rem", color: "oklch(var(--color-slate-400) / 0.7)", textAlign: "left" }}
                       >
                         {link.label}
                       </button>
@@ -156,7 +156,7 @@ export default function LandingFooter() {
                       <Link
                         href={link.href}
                         className="transition-colors hover:text-white"
-                        style={{ fontSize: "0.83rem", color: "oklch(var(--landing-slate-400) / 0.7)" }}
+                        style={{ fontSize: "0.83rem", color: "oklch(var(--color-slate-400) / 0.7)" }}
                       >
                         {link.label}
                       </Link>
@@ -169,15 +169,15 @@ export default function LandingFooter() {
         </div>
       </div>
 
-      <div style={{ borderTop: "1px solid oklch(var(--landing-white) / 0.06)" }} />
+      <div style={{ borderTop: "1px solid oklch(var(--color-white) / 0.06)" }} />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p style={{ fontSize: "0.78rem", color: "oklch(var(--landing-slate-400) / 0.45)" }}>
+        <p style={{ fontSize: "0.78rem", color: "oklch(var(--color-slate-400) / 0.45)" }}>
           © {currentYear} Rekap Resi. Hak cipta dilindungi undang-undang.
         </p>
 
-        <p className="flex items-center gap-1.5" style={{ fontSize: "0.78rem", color: "oklch(var(--landing-slate-400) / 0.45)" }}>
-          Dibuat dengan <LuHeart size={12} style={{ color: "oklch(var(--landing-red-500))" }} /> untuk seller Indonesia
+        <p className="flex items-center gap-1.5" style={{ fontSize: "0.78rem", color: "oklch(var(--color-slate-400) / 0.45)" }}>
+          Dibuat dengan <LuHeart size={12} style={{ color: "oklch(var(--color-red-500))" }} /> untuk seller Indonesia
         </p>
 
         <div className="flex items-center gap-4">
@@ -185,7 +185,7 @@ export default function LandingFooter() {
             <button
               key={item}
               className="transition-colors hover:text-white"
-              style={{ fontSize: "0.76rem", color: "oklch(var(--landing-slate-400) / 0.45)" }}
+              style={{ fontSize: "0.76rem", color: "oklch(var(--color-slate-400) / 0.45)" }}
             >
               {item}
             </button>

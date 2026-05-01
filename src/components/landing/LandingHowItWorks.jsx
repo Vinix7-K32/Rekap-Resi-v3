@@ -16,11 +16,11 @@ const STEPS = [
     icon: LuPackagePlus,
     title: "Tambah Data Resi",
     desc: "Input nomor resi return dari marketplace lewat form manual, scan barcode, atau upload file CSV massal. Semua tersimpan otomatis di sistem.",
-    color: "oklch(var(--landing-blue-600))",
-    colorSoft: "oklch(var(--landing-blue-600) / 0.8)",
-    bg: "oklch(var(--landing-blue-100))",
-    border: "oklch(var(--landing-blue-200))",
-    shadow: "oklch(var(--landing-blue-600) / 0.25)",
+    color: "oklch(var(--color-blue-600))",
+    colorSoft: "oklch(var(--color-blue-600) / 0.8)",
+    bg: "oklch(var(--color-blue-100))",
+    border: "oklch(var(--color-blue-200))",
+    shadow: "oklch(var(--color-blue-600) / 0.25)",
     note: "Manual / CSV / Scan",
   },
   {
@@ -28,11 +28,11 @@ const STEPS = [
     icon: LuFileSpreadsheet,
     title: "Input Data Marketplace",
     desc: "Masukkan data resi dari sisi marketplace (Shopee, Tokopedia, dsb.) ke form perbandingan — bisa manual atau upload CSV ekspor marketplace.",
-    color: "oklch(var(--landing-violet-500))",
-    colorSoft: "oklch(var(--landing-violet-500) / 0.8)",
-    bg: "oklch(var(--landing-violet-50))",
-    border: "oklch(var(--landing-violet-200))",
-    shadow: "oklch(var(--landing-violet-500) / 0.25)",
+    color: "oklch(var(--color-violet-500))",
+    colorSoft: "oklch(var(--color-violet-500) / 0.8)",
+    bg: "oklch(var(--color-violet-50))",
+    border: "oklch(var(--color-violet-200))",
+    shadow: "oklch(var(--color-violet-500) / 0.25)",
     note: "Form / Drag & Drop",
   },
   {
@@ -40,11 +40,11 @@ const STEPS = [
     icon: LuArrowLeftRight,
     title: "Bandingkan & Verifikasi",
     desc: "Tekan tombol \"Bandingkan & Verifikasi\". Sistem akan mencocokkan data internal vs marketplace secara otomatis dan menandai statusnya.",
-    color: "oklch(var(--landing-amber-600))",
-    colorSoft: "oklch(var(--landing-amber-600) / 0.8)",
-    bg: "oklch(var(--landing-amber-100))",
-    border: "oklch(var(--landing-amber-200))",
-    shadow: "oklch(var(--landing-amber-600) / 0.25)",
+    color: "oklch(var(--color-amber-600))",
+    colorSoft: "oklch(var(--color-amber-600) / 0.8)",
+    bg: "oklch(var(--color-amber-100))",
+    border: "oklch(var(--color-amber-200))",
+    shadow: "oklch(var(--color-amber-600) / 0.25)",
     note: "< 3 detik proses",
   },
   {
@@ -52,11 +52,11 @@ const STEPS = [
     icon: LuChartBar,
     title: "Analisis & Export",
     desc: "Lihat summary match-rate, filter hasil per status, dan export laporan ke CSV. Data analitik tersedia langsung di dashboard utama.",
-    color: "oklch(var(--landing-green-500))",
-    colorSoft: "oklch(var(--landing-green-500) / 0.8)",
-    bg: "oklch(var(--landing-green-50))",
-    border: "oklch(var(--landing-green-200))",
-    shadow: "oklch(var(--landing-green-500) / 0.25)",
+    color: "oklch(var(--color-green-500))",
+    colorSoft: "oklch(var(--color-green-500) / 0.8)",
+    bg: "oklch(var(--color-green-50))",
+    border: "oklch(var(--color-green-200))",
+    shadow: "oklch(var(--color-green-500) / 0.25)",
     note: "Export CSV",
   },
 ];
@@ -66,7 +66,7 @@ export default function LandingHowItWorks() {
     <section
       id="how-it-works"
       className="py-20 md:py-28"
-      style={{ backgroundColor: "oklch(var(--landing-white))" }}
+      style={{ backgroundColor: "oklch(var(--color-white))" }}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div
@@ -79,13 +79,13 @@ export default function LandingHowItWorks() {
           <span
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
             style={{
-              backgroundColor: "oklch(var(--landing-violet-50))",
-              color: "oklch(var(--landing-violet-500))",
+              backgroundColor: "oklch(var(--color-violet-50))",
+              color: "oklch(var(--color-violet-500))",
               fontSize: "0.78rem",
               fontWeight: 700,
             }}
           >
-            <LuArrowLeftRight size={13} style={{ color: "oklch(var(--landing-violet-500))" }} /> Cara Kerja
+            <LuArrowLeftRight size={13} style={{ color: "oklch(var(--color-violet-500))" }} /> Cara Kerja
           </span>
           <h2
             style={{
@@ -93,14 +93,14 @@ export default function LandingHowItWorks() {
               fontWeight: 900,
               letterSpacing: "-0.03em",
               lineHeight: 1.18,
-              color: "oklch(var(--landing-slate-900))",
+              color: "oklch(var(--color-slate-900))",
             }}
           >
             Mulai dalam{" "}
             <span
               style={{
                 background:
-                  "linear-gradient(90deg, oklch(var(--landing-violet-500)), oklch(var(--landing-blue-600)))",
+                  "linear-gradient(90deg, oklch(var(--color-violet-500)), oklch(var(--color-blue-600)))",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -110,7 +110,7 @@ export default function LandingHowItWorks() {
           </h2>
           <p
             className="mt-4 mx-auto"
-            style={{ fontSize: "1rem", lineHeight: 1.72, maxWidth: "520px", color: "oklch(var(--landing-slate-500))" }}
+            style={{ fontSize: "1rem", lineHeight: 1.72, maxWidth: "520px", color: "oklch(var(--color-slate-500))" }}
           >
             Tidak perlu pelatihan khusus. Rekap Resi dirancang intuitif — seller baru bisa
             langsung paham dalam hitungan menit.
@@ -122,7 +122,7 @@ export default function LandingHowItWorks() {
             className="absolute top-13 left-[12.5%] right-[12.5%] h-0.5 z-0"
             style={{
               background:
-                "linear-gradient(90deg, oklch(var(--landing-blue-200)), oklch(var(--landing-violet-200)), oklch(var(--landing-amber-200)), oklch(var(--landing-green-200)))",
+                "linear-gradient(90deg, oklch(var(--color-blue-200)), oklch(var(--color-violet-200)), oklch(var(--color-amber-200)), oklch(var(--color-green-200)))",
             }}
           />
 
@@ -138,7 +138,7 @@ export default function LandingHowItWorks() {
               <div
                 className="w-17 h-17 rounded-2xl flex flex-col items-center justify-center mb-5 relative"
                 style={{
-                  background: `linear-gradient(135deg, ${step.bg}, oklch(var(--landing-white)))`,
+                  background: `linear-gradient(135deg, ${step.bg}, oklch(var(--color-white)))`,
                   border: `2px solid ${step.border}`,
                   boxShadow: `0 8px 24px ${step.shadow}`,
                 }}
@@ -173,13 +173,13 @@ export default function LandingHowItWorks() {
                 style={{
                   fontSize: "0.97rem",
                   fontWeight: 800,
-                  color: "oklch(var(--landing-slate-900))",
+                  color: "oklch(var(--color-slate-900))",
                   marginBottom: "8px",
                 }}
               >
                 {step.title}
               </h3>
-              <p style={{ fontSize: "0.82rem", color: "oklch(var(--landing-slate-500))", lineHeight: 1.65 }}>{step.desc}</p>
+              <p style={{ fontSize: "0.82rem", color: "oklch(var(--color-slate-500))", lineHeight: 1.65 }}>{step.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -198,7 +198,7 @@ export default function LandingHowItWorks() {
                 <div
                   className="w-12 h-12 rounded-2xl flex items-center justify-center relative"
                   style={{
-                    background: `linear-gradient(135deg, ${step.bg}, oklch(var(--landing-white)))`,
+                    background: `linear-gradient(135deg, ${step.bg}, oklch(var(--color-white)))`,
                     border: `2px solid ${step.border}`,
                     boxShadow: `0 6px 18px ${step.shadow}`,
                     flexShrink: 0,
@@ -234,13 +234,13 @@ export default function LandingHowItWorks() {
                   style={{
                     fontSize: "0.97rem",
                     fontWeight: 800,
-                    color: "oklch(var(--landing-slate-900))",
+                    color: "oklch(var(--color-slate-900))",
                     marginBottom: "6px",
                   }}
                 >
                   {step.title}
                 </h3>
-                <p style={{ fontSize: "0.84rem", color: "oklch(var(--landing-slate-500))", lineHeight: 1.65 }}>
+                <p style={{ fontSize: "0.84rem", color: "oklch(var(--color-slate-500))", lineHeight: 1.65 }}>
                   {step.desc}
                 </p>
               </div>
@@ -258,22 +258,22 @@ export default function LandingHowItWorks() {
           <div
             className="inline-flex flex-col sm:flex-row items-center gap-4 px-8 py-5 rounded-2xl"
             style={{
-              backgroundColor: "oklch(var(--landing-slate-50))",
-              border: "1px solid oklch(var(--landing-slate-200))",
-              boxShadow: "0 2px 8px oklch(var(--landing-black) / 0.04)",
+              backgroundColor: "oklch(var(--color-slate-50))",
+              border: "1px solid oklch(var(--color-slate-200))",
+              boxShadow: "0 2px 8px oklch(var(--color-black) / 0.04)",
             }}
           >
-            <p style={{ fontSize: "0.92rem", color: "oklch(var(--landing-slate-700))" }}>
+            <p style={{ fontSize: "0.92rem", color: "oklch(var(--color-slate-700))" }}>
               Siap mencoba? Setup selesai dalam{" "}
-              <strong style={{ color: "oklch(var(--landing-slate-900))" }}>kurang dari 5 menit.</strong>
+              <strong style={{ color: "oklch(var(--color-slate-900))" }}>kurang dari 5 menit.</strong>
             </p>
             <Link
               href="/register"
               className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all hover:scale-105"
               style={{
                 background:
-                  "linear-gradient(135deg, oklch(var(--landing-blue-500)), oklch(var(--landing-blue-700)))",
-                boxShadow: "0 4px 14px oklch(var(--landing-blue-500) / 0.35)",
+                  "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
+                boxShadow: "0 4px 14px oklch(var(--color-blue-500) / 0.35)",
                 fontSize: "0.88rem",
                 fontWeight: 700,
                 whiteSpace: "nowrap",

@@ -17,20 +17,20 @@ const FEATURES = [
     icon: LuPackagePlus,
     title: "Tambah Resi Manual",
     desc: "Input nomor resi satu per satu lewat form yang simpel. Dukung scan barcode langsung dari kamera perangkat Anda.",
-    color: "oklch(var(--landing-blue-500))",
-    bg: "oklch(var(--landing-blue-100))",
-    border: "oklch(var(--landing-blue-200))",
+    color: "oklch(var(--color-blue-500))",
+    bg: "oklch(var(--color-blue-100))",
+    border: "oklch(var(--color-blue-200))",
     tag: "Paling Sering Dipakai",
-    tagColor: "oklch(var(--landing-blue-600))",
-    tagBg: "oklch(var(--landing-blue-100))",
+    tagColor: "oklch(var(--color-blue-600))",
+    tagBg: "oklch(var(--color-blue-100))",
   },
   {
     icon: LuFileSpreadsheet,
     title: "Import CSV Massal",
     desc: "Upload ratusan resi sekaligus lewat drag & drop file CSV. Cocok untuk seller volume tinggi saat akhir bulan.",
-    color: "oklch(var(--landing-green-500))",
-    bg: "oklch(var(--landing-green-50))",
-    border: "oklch(var(--landing-green-200))",
+    color: "oklch(var(--color-green-500))",
+    bg: "oklch(var(--color-green-50))",
+    border: "oklch(var(--color-green-200))",
     tag: null,
     tagColor: "",
     tagBg: "",
@@ -39,20 +39,20 @@ const FEATURES = [
     icon: LuArrowLeftRight,
     title: "Verifikasi Otomatis",
     desc: "Bandingkan data resi internal dengan data marketplace dalam hitungan detik. Langsung tahu mana yang Cocok, Tidak Cocok, atau Tidak Ditemukan.",
-    color: "oklch(var(--landing-violet-500))",
-    bg: "oklch(var(--landing-violet-50))",
-    border: "oklch(var(--landing-violet-200))",
+    color: "oklch(var(--color-violet-500))",
+    bg: "oklch(var(--color-violet-50))",
+    border: "oklch(var(--color-violet-200))",
     tag: "Fitur Unggulan",
-    tagColor: "oklch(var(--landing-violet-500))",
-    tagBg: "oklch(var(--landing-violet-100))",
+    tagColor: "oklch(var(--color-violet-500))",
+    tagBg: "oklch(var(--color-violet-100))",
   },
   {
     icon: LuChartBar,
     title: "Analitik Real-time",
     desc: "Dashboard grafik interaktif yang menampilkan tren resi harian, mingguan, dan bulanan dengan area chart dan bar chart.",
-    color: "oklch(var(--landing-amber-600))",
-    bg: "oklch(var(--landing-amber-100))",
-    border: "oklch(var(--landing-amber-200))",
+    color: "oklch(var(--color-amber-600))",
+    bg: "oklch(var(--color-amber-100))",
+    border: "oklch(var(--color-amber-200))",
     tag: null,
     tagColor: "",
     tagBg: "",
@@ -61,20 +61,20 @@ const FEATURES = [
     icon: LuStore,
     title: "Multi-Marketplace",
     desc: "Mendukung Shopee, Tokopedia, Lazada, Bukalapak, dan TikTok Shop. Kelola semua platform dari satu tempat tanpa berpindah tab.",
-    color: "oklch(var(--landing-orange-600))",
-    bg: "oklch(var(--landing-orange-50))",
-    border: "oklch(var(--landing-orange-200))",
+    color: "oklch(var(--color-orange-600))",
+    bg: "oklch(var(--color-orange-50))",
+    border: "oklch(var(--color-orange-200))",
     tag: "5 Platform",
-    tagColor: "oklch(var(--landing-orange-600))",
-    tagBg: "oklch(var(--landing-orange-100))",
+    tagColor: "oklch(var(--color-orange-600))",
+    tagBg: "oklch(var(--color-orange-100))",
   },
   {
     icon: LuFileDown,
     title: "Export Laporan",
     desc: "Ekspor data resi lengkap ke CSV kapan saja. Siap langsung untuk keperluan laporan operasional atau rekonsiliasi keuangan.",
-    color: "oklch(var(--landing-cyan-600))",
-    bg: "oklch(var(--landing-cyan-50))",
-    border: "oklch(var(--landing-cyan-200))",
+    color: "oklch(var(--color-cyan-600))",
+    bg: "oklch(var(--color-cyan-50))",
+    border: "oklch(var(--color-cyan-200))",
     tag: null,
     tagColor: "",
     tagBg: "",
@@ -95,7 +95,7 @@ export default function LandingFeatures() {
     <section
       id="features"
       className="py-20 md:py-28"
-      style={{ backgroundColor: "oklch(var(--landing-slate-100))" }}
+      style={{ backgroundColor: "oklch(var(--color-slate-100))" }}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div
@@ -108,13 +108,13 @@ export default function LandingFeatures() {
           <span
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
             style={{
-              backgroundColor: "oklch(var(--landing-blue-100))",
-              color: "oklch(var(--landing-blue-700))",
+              backgroundColor: "oklch(var(--color-blue-100))",
+              color: "oklch(var(--color-blue-700))",
               fontSize: "0.78rem",
               fontWeight: 700,
             }}
           >
-            <LuScan size={13} style={{ color: "oklch(var(--landing-blue-700))" }} /> Fitur Lengkap
+            <LuScan size={13} style={{ color: "oklch(var(--color-blue-700))" }} /> Fitur Lengkap
           </span>
           <h2
             className="text-slate-900"
@@ -123,7 +123,7 @@ export default function LandingFeatures() {
             Semua yang Anda butuhkan,{" "}
             <span
               style={{
-                background: "linear-gradient(90deg, oklch(var(--landing-blue-600)), oklch(var(--landing-violet-500)))",
+                background: "linear-gradient(90deg, oklch(var(--color-blue-600)), oklch(var(--color-violet-500)))",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -133,7 +133,7 @@ export default function LandingFeatures() {
           </h2>
           <p
             className="mt-4 mx-auto"
-            style={{ fontSize: "1rem", lineHeight: 1.72, maxWidth: "560px", color: "oklch(var(--landing-slate-500))" }}
+            style={{ fontSize: "1rem", lineHeight: 1.72, maxWidth: "560px", color: "oklch(var(--color-slate-500))" }}
           >
             Dari pencatatan manual hingga verifikasi otomatis, Rekap Resi hadir dengan fitur
             lengkap yang dirancang khusus untuk kebutuhan seller Indonesia.
@@ -149,13 +149,13 @@ export default function LandingFeatures() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
-              whileHover={{ y: -4, boxShadow: "0 12px 40px oklch(var(--landing-black) / 0.1)" }}
+              whileHover={{ y: -4, boxShadow: "0 12px 40px oklch(var(--color-black) / 0.1)" }}
               className="relative rounded-2xl p-6 transition-all cursor-default"
               style={{
-                backgroundColor: "oklch(var(--landing-white))",
-                border: "1px solid oklch(var(--landing-slate-200))",
+                backgroundColor: "oklch(var(--color-white))",
+                border: "1px solid oklch(var(--color-slate-200))",
                 boxShadow:
-                  "0 1px 3px oklch(var(--landing-black) / 0.04), 0 4px 16px oklch(var(--landing-black) / 0.04)",
+                  "0 1px 3px oklch(var(--color-black) / 0.04), 0 4px 16px oklch(var(--color-black) / 0.04)",
               }}
             >
               {feat.tag && (
@@ -178,13 +178,13 @@ export default function LandingFeatures() {
                 style={{
                   fontSize: "0.97rem",
                   fontWeight: 700,
-                  color: "oklch(var(--landing-slate-900))",
+                  color: "oklch(var(--color-slate-900))",
                   marginBottom: "8px",
                 }}
               >
                 {feat.title}
               </h3>
-              <p style={{ fontSize: "0.85rem", color: "oklch(var(--landing-slate-500))", lineHeight: 1.68 }}>
+              <p style={{ fontSize: "0.85rem", color: "oklch(var(--color-slate-500))", lineHeight: 1.68 }}>
                 {feat.desc}
               </p>
 
@@ -206,15 +206,15 @@ export default function LandingFeatures() {
           <div
             className="flex items-center gap-3 px-5 py-3 rounded-2xl"
             style={{
-              backgroundColor: "oklch(var(--landing-white))",
-              border: "1px solid oklch(var(--landing-slate-200))",
-              boxShadow: "0 2px 8px oklch(var(--landing-black) / 0.06)",
+              backgroundColor: "oklch(var(--color-white))",
+              border: "1px solid oklch(var(--color-slate-200))",
+              boxShadow: "0 2px 8px oklch(var(--color-black) / 0.06)",
             }}
           >
-            <LuBell size={15} style={{ color: "oklch(var(--landing-amber-500))" }} />
-            <p style={{ fontSize: "0.83rem", color: "oklch(var(--landing-slate-700))" }}>
+            <LuBell size={15} style={{ color: "oklch(var(--color-amber-500))" }} />
+            <p style={{ fontSize: "0.83rem", color: "oklch(var(--color-slate-700))" }}>
               Notifikasi perubahan status resi dikirim{" "}
-              <strong style={{ color: "oklch(var(--landing-slate-900))" }}>real-time</strong> ke dashboard Anda.
+              <strong style={{ color: "oklch(var(--color-slate-900))" }}>real-time</strong> ke dashboard Anda.
             </p>
           </div>
         </motion.div>

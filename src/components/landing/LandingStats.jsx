@@ -9,33 +9,33 @@ const STATS = [
     icon: LandingIcon,
     value: "50.000+",
     label: "Resi diproses",
-    color: "oklch(var(--landing-blue-600))",
-    bg: "oklch(var(--landing-blue-100))",
-    border: "oklch(var(--landing-blue-200))",
+    color: "oklch(var(--color-blue-600))",
+    bg: "oklch(var(--color-blue-100))",
+    border: "oklch(var(--color-blue-200))",
   },
   {
     icon: LuUsers,
     value: "500+",
     label: "Pengguna aktif",
-    color: "oklch(var(--landing-green-500))",
-    bg: "oklch(var(--landing-green-50))",
-    border: "oklch(var(--landing-green-200))",
+    color: "oklch(var(--color-green-500))",
+    bg: "oklch(var(--color-green-50))",
+    border: "oklch(var(--color-green-200))",
   },
   {
     icon: LuTrendingUp,
     value: "94%",
     label: "Rata-rata match rate",
-    color: "oklch(var(--landing-violet-500))",
-    bg: "oklch(var(--landing-violet-50))",
-    border: "oklch(var(--landing-violet-200))",
+    color: "oklch(var(--color-violet-500))",
+    bg: "oklch(var(--color-violet-50))",
+    border: "oklch(var(--color-violet-200))",
   },
   {
     icon: LuClock,
     value: "99.9%",
     label: "Uptime SLA",
-    color: "oklch(var(--landing-amber-600))",
-    bg: "oklch(var(--landing-amber-100))",
-    border: "oklch(var(--landing-amber-200))",
+    color: "oklch(var(--color-amber-600))",
+    bg: "oklch(var(--color-amber-100))",
+    border: "oklch(var(--color-amber-200))",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function LandingStats() {
   return (
     <section
       className="py-10"
-      style={{ backgroundColor: "oklch(var(--landing-white))", borderBottom: "1px solid oklch(var(--landing-slate-200))" }}
+      style={{ backgroundColor: "oklch(var(--color-white))", borderBottom: "1px solid oklch(var(--color-slate-200))" }}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -61,7 +61,7 @@ export default function LandingStats() {
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ backgroundColor: "oklch(var(--landing-white))", boxShadow: `0 2px 8px ${stat.border}` }}
+                  style={{ backgroundColor: "oklch(var(--color-white))", boxShadow: `0 2px 8px ${stat.border}` }}
                 >
                   <Icon size={18} style={{ color: stat.color }} />
                 </div>
@@ -73,7 +73,7 @@ export default function LandingStats() {
                   <p
                     style={{
                       fontSize: "0.73rem",
-                      color: "oklch(var(--landing-slate-500))",
+                      color: "oklch(var(--color-slate-500))",
                       marginTop: "3px",
                       lineHeight: 1.3,
                     }}
