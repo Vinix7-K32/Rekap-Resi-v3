@@ -77,7 +77,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen flex bg-slate-50">
-      <div className="hidden lg:flex flex-col justify-between w-110 xl:w-120 shrink-0 relative overflow-hidden bg-linear-to-br from-[oklch(var(--ink-950))] via-[oklch(var(--ink-900))] to-[oklch(var(--ink-800))]">
+      <div className="hidden lg:flex flex-col justify-between w-110 xl:w-120 shrink-0 relative overflow-hidden bg-linear-to-br from-(--ink-950) via-(--ink-900) to-(--ink-800)">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-32 -right-20 w-96 h-96 rounded-full bg-radial from-violet-500/20 from-0% to-transparent to-70%" />
           <div className="absolute -bottom-20 -left-10 w-72 h-72 rounded-full bg-radial from-blue-500/20 from-0% to-transparent to-70%" />
@@ -178,7 +178,7 @@ export default function Page() {
             </span>
           </div>
 
-          <div className="rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-[0_4px_6px_oklch(var(--ink-900)/0.06),0_20px_60px_oklch(var(--ink-900)/0.12)]">
+          <div className="rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-[0_4px_6px_var(--ink-900)/0.06,0_20px_60px_var(--ink-900)/0.12]">
             <div className="px-8 pt-8 pb-5">
               <h1 className="text-[1.5rem] font-extrabold tracking-[-0.02em] text-slate-900">
                 Buat akun baru

@@ -55,54 +55,33 @@ export default function LandingFooter() {
   };
 
   return (
-    <footer
-      style={{
-        background: "linear-gradient(180deg, oklch(var(--ink-900)) 0%, oklch(var(--ink-950)) 100%)",
-      }}
-    >
+    <footer className="bg-[linear-gradient(180deg,var(--ink-900))_0%,var(--ink-950)_100%]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-10">
           <div className="col-span-2 md:col-span-2">
             <Link href="/landing" className="flex items-center gap-3 mb-4">
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center"
-                style={{
-                  background:
-                    "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
-                  boxShadow: "0 4px 12px oklch(var(--color-blue-500) / 0.35)",
-                }}
-              >
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-linear-to-br from-blue-500 to-blue-700 shadow-[0_4px_12px_rgba(59,130,246,0.35)]">
                 <LandingIcon size={20} className="text-white" />
               </div>
-              <span
-                className="text-white"
-                style={{ fontWeight: 700, fontSize: "1.1rem", letterSpacing: "-0.01em" }}
-              >
+              <span className="text-white font-bold text-[1.1rem] tracking-[-0.01em]">
                 Rekap Resi
               </span>
             </Link>
 
-            <p
-              style={{
-                fontSize: "0.84rem",
-                color: "oklch(var(--color-slate-400) / 0.75)",
-                lineHeight: 1.72,
-                marginBottom: "18px",
-              }}
-            >
+            <p className="text-[0.84rem] text-slate-400/75 leading-[1.72] mb-4.5">
               Sistem manajemen resi pengembalian barang yang terpusat, cepat, dan akurat untuk semua seller Indonesia.
             </p>
 
             <div className="space-y-2.5">
               <div className="flex items-center gap-2.5">
-                <LuMail size={13} style={{ color: "oklch(var(--color-blue-400))", flexShrink: 0 }} />
-                <span style={{ fontSize: "0.8rem", color: "oklch(var(--color-slate-400) / 0.7)" }}>
+                <LuMail size={13} className="text-blue-400 shrink-0" />
+                <span className="text-[0.8rem] text-slate-400/70">
                   hello@rekapresi.id
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <LuMapPin size={13} style={{ color: "oklch(var(--color-blue-400))", flexShrink: 0 }} />
-                <span style={{ fontSize: "0.8rem", color: "oklch(var(--color-slate-400) / 0.7)" }}>
+                <LuMapPin size={13} className="text-blue-400 shrink-0" />
+                <span className="text-[0.8rem] text-slate-400/70">
                   Jakarta, Indonesia
                 </span>
               </div>
@@ -112,15 +91,7 @@ export default function LandingFooter() {
               {FOOTER_MARKETPLACES.map((mp) => (
                 <span
                   key={mp}
-                  style={{
-                    fontSize: "0.62rem",
-                    fontWeight: 600,
-                    color: "oklch(var(--color-slate-400) / 0.6)",
-                    backgroundColor: "oklch(var(--color-white) / 0.05)",
-                    border: "1px solid oklch(var(--color-white) / 0.07)",
-                    padding: "2px 8px",
-                    borderRadius: "999px",
-                  }}
+                  className="text-[0.62rem] font-semibold text-slate-400/60 bg-white/5 border border-white/10 px-2 py-0.5 rounded-full"
                 >
                   {mp}
                 </span>
@@ -130,15 +101,7 @@ export default function LandingFooter() {
 
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.heading} className="col-span-1">
-              <p
-                style={{
-                  fontSize: "0.7rem",
-                  fontWeight: 700,
-                  color: "oklch(var(--color-slate-400) / 0.5)",
-                  letterSpacing: "0.08em",
-                  marginBottom: "14px",
-                }}
-              >
+              <p className="text-[0.7rem] font-bold text-slate-400/50 tracking-[0.08em] mb-3.5">
                 {col.heading.toUpperCase()}
               </p>
               <ul className="space-y-2.5">
@@ -147,16 +110,14 @@ export default function LandingFooter() {
                     {link.href.startsWith("#") ? (
                       <button
                         onClick={() => handleAnchor(link.href)}
-                        className="transition-colors hover:text-white"
-                        style={{ fontSize: "0.83rem", color: "oklch(var(--color-slate-400) / 0.7)", textAlign: "left" }}
+                        className="text-[0.83rem] text-slate-400/70 text-left transition-colors hover:text-white"
                       >
                         {link.label}
                       </button>
                     ) : (
                       <Link
                         href={link.href}
-                        className="transition-colors hover:text-white"
-                        style={{ fontSize: "0.83rem", color: "oklch(var(--color-slate-400) / 0.7)" }}
+                        className="text-[0.83rem] text-slate-400/70 transition-colors hover:text-white"
                       >
                         {link.label}
                       </Link>
@@ -169,23 +130,22 @@ export default function LandingFooter() {
         </div>
       </div>
 
-      <div style={{ borderTop: "1px solid oklch(var(--color-white) / 0.06)" }} />
+      <div className="border-t border-white/10" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p style={{ fontSize: "0.78rem", color: "oklch(var(--color-slate-400) / 0.45)" }}>
+        <p className="text-[0.78rem] text-slate-400/45">
           © {currentYear} Rekap Resi. Hak cipta dilindungi undang-undang.
         </p>
 
-        <p className="flex items-center gap-1.5" style={{ fontSize: "0.78rem", color: "oklch(var(--color-slate-400) / 0.45)" }}>
-          Dibuat dengan <LuHeart size={12} style={{ color: "oklch(var(--color-red-500))" }} /> untuk seller Indonesia
+        <p className="flex items-center gap-1.5 text-[0.78rem] text-slate-400/45">
+          Dibuat dengan <LuHeart size={12} className="text-red-500" /> untuk seller Indonesia
         </p>
 
         <div className="flex items-center gap-4">
           {["Privasi", "Ketentuan", "Cookie"].map((item) => (
             <button
               key={item}
-              className="transition-colors hover:text-white"
-              style={{ fontSize: "0.76rem", color: "oklch(var(--color-slate-400) / 0.45)" }}
+              className="text-[0.76rem] text-slate-400/45 transition-colors hover:text-white"
             >
               {item}
             </button>

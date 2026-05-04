@@ -9,10 +9,10 @@ const TESTIMONIALS = [
     role: "Seller Shopee",
     company: "Toko Elektronik Budi",
     avatar: "BS",
-    avatarGrad: "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
+    avatarGradClass: "from-blue-500 to-blue-700",
     marketplace: "Shopee",
-    mpColor: "oklch(var(--color-orange-600))",
-    mpBg: "oklch(var(--color-orange-50))",
+    mpTextClass: "text-orange-600",
+    mpBgClass: "bg-orange-50",
     rating: 5,
     text: "Sebelum pakai Rekap Resi, saya harus cek satu per satu resi return di spreadsheet. Sekarang tinggal upload CSV, langsung ketahuan mana yang cocok dan mana yang bermasalah. Hemat 2-3 jam kerja per hari!",
     highlight: "Hemat 2-3 jam kerja per hari",
@@ -22,10 +22,10 @@ const TESTIMONIALS = [
     role: "Seller Tokopedia & Shopee",
     company: "SR Fashion Store",
     avatar: "SR",
-    avatarGrad: "linear-gradient(135deg, oklch(var(--color-pink-500)), oklch(var(--color-pink-700)))",
+    avatarGradClass: "from-pink-500 to-pink-700",
     marketplace: "Tokopedia",
-    mpColor: "oklch(var(--color-green-500))",
-    mpBg: "oklch(var(--color-green-50))",
+    mpTextClass: "text-green-500",
+    mpBgClass: "bg-green-50",
     rating: 5,
     text: "Fitur verifikasi otomatisnya luar biasa. Dulu saya sering pusing karena data resi tidak sinkron antara Tokopedia dan catatan internal. Sekarang bisa langsung tahu dengan sekali klik. Sangat rekomendasikan!",
     highlight: "Verifikasi dengan sekali klik",
@@ -35,14 +35,20 @@ const TESTIMONIALS = [
     role: "Manager Operasional",
     company: "PT Distribusi Nusantara",
     avatar: "AF",
-    avatarGrad: "linear-gradient(135deg, oklch(var(--color-violet-400)), oklch(var(--color-violet-700)))",
+    avatarGradClass: "from-violet-400 to-violet-700",
     marketplace: "Multi-Platform",
-    mpColor: "oklch(var(--color-violet-500))",
-    mpBg: "oklch(var(--color-violet-50))",
+    mpTextClass: "text-violet-500",
+    mpBgClass: "bg-violet-50",
     rating: 5,
     text: "Kami mengelola return dari 4 marketplace sekaligus dengan volume ratusan resi per hari. Rekap Resi jadi tulang punggung operasional kami. Dashboard analitiknya juga membantu saya buat laporan ke manajemen.",
     highlight: "4 marketplace, 1 dashboard",
   },
+];
+
+const RATING_BARS = [
+  { stars: 5, pct: 92, widthClass: "w-[92%]" },
+  { stars: 4, pct: 6, widthClass: "w-[6%]" },
+  { stars: 3, pct: 2, widthClass: "w-[2%]" },
 ];
 
 function StarRating({ count }) {
@@ -52,10 +58,7 @@ function StarRating({ count }) {
         <LuStar
           key={i}
           size={14}
-          style={{
-            color: i < count ? "oklch(var(--color-amber-500))" : "oklch(var(--color-slate-200))",
-            fill: i < count ? "oklch(var(--color-amber-500))" : "none",
-          }}
+          className={i < count ? "text-amber-500 fill-amber-500" : "text-slate-200 fill-transparent"}
         />
       ))}
     </div>
@@ -66,8 +69,7 @@ export default function LandingTestimonials() {
   return (
     <section
       id="testimonials"
-      className="py-20 md:py-28"
-      style={{ backgroundColor: "oklch(var(--color-white))" }}
+      className="py-20 md:py-28 bg-white"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <motion.div
@@ -77,41 +79,19 @@ export default function LandingTestimonials() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
-            style={{
-              backgroundColor: "oklch(var(--color-amber-100))",
-              color: "oklch(var(--color-amber-600))",
-              fontSize: "0.78rem",
-              fontWeight: 700,
-            }}
-          >
-            <LuStar size={13} style={{ color: "oklch(var(--color-amber-600))" }} /> Testimoni Pengguna
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4 bg-amber-100 text-amber-600 text-[0.78rem] font-bold">
+            <LuStar size={13} className="text-amber-600" /> Testimoni Pengguna
           </span>
           <h2
-            style={{
-              fontSize: "clamp(1.6rem, 4vw, 2.4rem)",
-              fontWeight: 900,
-              letterSpacing: "-0.03em",
-              lineHeight: 1.18,
-              color: "oklch(var(--color-slate-900))",
-            }}
+            className="text-[clamp(1.6rem,4vw,2.4rem)] font-black tracking-[-0.03em] leading-[1.18] text-slate-900"
           >
             Dipercaya{" "}
-            <span
-              style={{
-                background:
-                  "linear-gradient(90deg, oklch(var(--color-amber-600)), oklch(var(--color-orange-600)))",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
+            <span className="bg-linear-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
               500+ seller aktif
             </span>
           </h2>
           <p
-            className="mt-4 mx-auto"
-            style={{ fontSize: "1rem", lineHeight: 1.72, maxWidth: "500px", color: "oklch(var(--color-slate-500))" }}
+            className="mt-4 mx-auto text-base leading-[1.72] max-w-125 text-slate-500"
           >
             Dari seller perorangan hingga tim operasional perusahaan distribusi,
             Rekap Resi hadir untuk semua skala bisnis.
@@ -127,60 +107,36 @@ export default function LandingTestimonials() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.48, delay: i * 0.1 }}
               whileHover={{ y: -4 }}
-              className="relative rounded-2xl p-6 flex flex-col gap-4 transition-all"
-              style={{
-                backgroundColor: "oklch(var(--color-white))",
-                border: "1px solid oklch(var(--color-slate-200))",
-                boxShadow:
-                  "0 1px 3px oklch(var(--color-black) / 0.04), 0 6px 20px oklch(var(--color-black) / 0.06)",
-              }}
+              className="relative rounded-2xl p-6 flex flex-col gap-4 transition-all bg-white border border-slate-200 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_6px_20px_rgba(0,0,0,0.06)] hover:-translate-y-1"
             >
-              <div className="absolute top-5 right-5 opacity-[0.07]">
-                <LuQuote size={48} style={{ color: "oklch(var(--color-slate-900))" }} />
+              <div className="absolute top-5 right-5 opacity-[0.07] text-slate-900">
+                <LuQuote size={48} />
               </div>
 
               <div className="flex items-start justify-between gap-3">
                 <StarRating count={t.rating} />
-                <span
-                  className="px-2.5 py-1 rounded-full shrink-0"
-                  style={{ backgroundColor: t.mpBg, color: t.mpColor, fontSize: "0.65rem", fontWeight: 700, whiteSpace: "nowrap" }}
-                >
+                <span className={`px-2.5 py-1 rounded-full shrink-0 text-[0.65rem] font-bold whitespace-nowrap ${t.mpBgClass} ${t.mpTextClass}`}>
                   {t.marketplace}
                 </span>
               </div>
 
-              <p style={{ fontSize: "0.87rem", color: "oklch(var(--color-slate-700))", lineHeight: 1.72, flex: 1 }}>
+              <p className="text-[0.87rem] text-slate-700 leading-[1.72] flex-1">
                 &quot;{t.text}&quot;
               </p>
 
-              <div
-                className="px-3 py-2 rounded-xl"
-                style={{ backgroundColor: "oklch(var(--color-slate-50))", border: "1px solid oklch(var(--color-slate-200))" }}
-              >
-                <p
-                  style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 700,
-                    color: "oklch(var(--color-slate-900))",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "6px",
-                  }}
-                >
-                  <LuSparkles size={12} style={{ color: "oklch(var(--color-amber-500))" }} /> {t.highlight}
+              <div className="px-3 py-2 rounded-xl bg-slate-50 border border-slate-200">
+                <p className="text-[0.75rem] font-bold text-slate-900 flex items-center gap-1.5">
+                  <LuSparkles size={12} className="text-amber-500" /> {t.highlight}
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 pt-2 border-t" style={{ borderColor: "oklch(var(--color-slate-100))" }}>
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white shrink-0"
-                  style={{ background: t.avatarGrad, fontSize: "0.75rem", fontWeight: 700 }}
-                >
+              <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white shrink-0 text-[0.75rem] font-bold bg-linear-to-br ${t.avatarGradClass}`}>
                   {t.avatar}
                 </div>
                 <div>
-                  <p style={{ fontSize: "0.88rem", fontWeight: 700, color: "oklch(var(--color-slate-900))" }}>{t.name}</p>
-                  <p style={{ fontSize: "0.72rem", color: "oklch(var(--color-slate-400))" }}>
+                  <p className="text-[0.88rem] font-bold text-slate-900">{t.name}</p>
+                  <p className="text-[0.72rem] text-slate-400">
                     {t.role} · {t.company}
                   </p>
                 </div>
@@ -194,50 +150,33 @@ export default function LandingTestimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.35 }}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 py-5 px-8 rounded-2xl"
-          style={{ backgroundColor: "oklch(var(--color-amber-100))", border: "1px solid oklch(var(--color-amber-200))" }}
+          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 py-5 px-8 rounded-2xl bg-amber-100 border border-amber-200"
         >
           <div className="text-center">
-            <p style={{ fontSize: "2.4rem", fontWeight: 900, color: "oklch(var(--color-amber-600))", lineHeight: 1 }}>
+            <p className="text-[2.4rem] font-black text-amber-600 leading-none">
               4.9
             </p>
             <StarRating count={5} />
-            <p style={{ fontSize: "0.7rem", color: "oklch(var(--color-amber-900))", marginTop: "4px" }}>Rating rata-rata</p>
+            <p className="text-[0.7rem] text-amber-900 mt-1">Rating rata-rata</p>
           </div>
-          <div className="hidden sm:block w-px h-14" style={{ backgroundColor: "oklch(var(--color-amber-200))" }} />
+          <div className="hidden sm:block w-px h-14 bg-amber-200" />
           <div className="space-y-1.5">
-            {[
-              { stars: 5, pct: 92 },
-              { stars: 4, pct: 6 },
-              { stars: 3, pct: 2 },
-            ].map(({ stars, pct }) => (
+            {RATING_BARS.map(({ stars, pct, widthClass }) => (
               <div key={stars} className="flex items-center gap-2.5">
-                <span
-                  style={{
-                    fontSize: "0.72rem",
-                    color: "oklch(var(--color-amber-900))",
-                    width: "40px",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "4px",
-                  }}
-                >
-                  {stars} <LuStar size={10} style={{ color: "oklch(var(--color-amber-600))" }} />
+                <span className="text-[0.72rem] text-amber-900 w-10 inline-flex items-center gap-1">
+                  {stars} <LuStar size={10} className="text-amber-600" />
                 </span>
-                <div className="w-32 h-2 rounded-full" style={{ backgroundColor: "oklch(var(--color-amber-50))" }}>
-                  <div
-                    className="h-full rounded-full"
-                    style={{ width: `${pct}%`, backgroundColor: "oklch(var(--color-amber-500))" }}
-                  />
+                <div className="w-32 h-2 rounded-full bg-amber-50">
+                  <div className={`h-full rounded-full bg-amber-500 ${widthClass}`} />
                 </div>
-                <span style={{ fontSize: "0.7rem", color: "oklch(var(--color-amber-900))" }}>{pct}%</span>
+                <span className="text-[0.7rem] text-amber-900">{pct}%</span>
               </div>
             ))}
           </div>
-          <div className="hidden sm:block w-px h-14" style={{ backgroundColor: "oklch(var(--color-amber-200))" }} />
+          <div className="hidden sm:block w-px h-14 bg-amber-200" />
           <div className="text-center">
-            <p style={{ fontSize: "1.6rem", fontWeight: 900, color: "oklch(var(--color-amber-600))", lineHeight: 1 }}>500+</p>
-            <p style={{ fontSize: "0.72rem", color: "oklch(var(--color-amber-900))", marginTop: "4px" }}>Pengguna aktif</p>
+            <p className="text-[1.6rem] font-black text-amber-600 leading-none">500+</p>
+            <p className="text-[0.72rem] text-amber-900 mt-1">Pengguna aktif</p>
           </div>
         </motion.div>
       </div>

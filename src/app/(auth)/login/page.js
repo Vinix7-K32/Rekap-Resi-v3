@@ -145,7 +145,7 @@ export default function Page() {
             </span>
           </div>
 
-          <div className="rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-[0_4px_6px_oklch(var(--ink-900)/0.06),0_20px_60px_oklch(var(--ink-900)/0.12)]">
+          <div className="rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-[0_4px_6px_var(--ink-900)/0.06,0_20px_60px_var(--ink-900)/0.12]">
             <div className="px-8 pt-8 pb-2">
               <h1 className="text-[1.55rem] font-extrabold tracking-[-0.02em] text-slate-900">
                 Selamat datang!

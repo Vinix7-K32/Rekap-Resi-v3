@@ -1,4 +1,4 @@
-export default function LandingIcon({ size = 20, className, style, title }) {
+export default function LandingIcon({ size = 20, className, title }) {
   return (
     <svg
       width={size}
@@ -7,7 +7,6 @@ export default function LandingIcon({ size = 20, className, style, title }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      style={style}
       focusable="false"
       role={title ? "img" : "presentation"}
       aria-hidden={title ? undefined : true}

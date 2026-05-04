@@ -31,30 +31,18 @@ export default function LandingNavbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        backgroundColor: scrolled ? "oklch(var(--ink-900) / 0.92)" : "transparent",
-        backdropFilter: scrolled ? "blur(16px)" : "none",
-        borderBottom: scrolled
-          ? "1px solid oklch(var(--color-white) / 0.07)"
-          : "1px solid transparent",
-      }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
+        scrolled
+          ? "bg-(--ink-900)/90 backdrop-blur-md border-white/10"
+          : "bg-transparent border-transparent"
+      }`}
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
         <Link href="/landing" className="flex items-center gap-3 shrink-0">
-          <div
-            className="w-9 h-9 rounded-xl flex items-center justify-center"
-            style={{
-              background: "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
-              boxShadow: "0 4px 12px oklch(var(--color-blue-500) / 0.35)",
-            }}
-          >
+          <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-linear-to-br from-blue-500 to-blue-700 shadow-[0_4px_12px_rgba(59,130,246,0.35)]">
             <LandingIcon size={18} className="text-white" />
           </div>
-          <span
-            className="text-white"
-            style={{ fontWeight: 700, fontSize: "1.05rem", letterSpacing: "-0.01em" }}
-          >
+          <span className="text-white font-bold text-[1.05rem] tracking-[-0.01em]">
             Rekap Resi
           </span>
         </Link>
@@ -64,12 +52,7 @@ export default function LandingNavbar() {
             <li key={label}>
               <button
                 onClick={() => handleAnchor(href)}
-                className="px-4 py-2 rounded-lg transition-colors hover:bg-white/10"
-                style={{
-                  color: "oklch(var(--color-slate-300) / 0.85)",
-                  fontSize: "0.88rem",
-                  fontWeight: 500,
-                }}
+                className="px-4 py-2 rounded-lg transition-colors hover:bg-white/10 text-slate-300/85 text-[0.88rem] font-medium"
               >
                 {label}
               </button>
@@ -80,34 +63,22 @@ export default function LandingNavbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/login"
-            className="px-4 py-2 rounded-xl transition-all hover:bg-white/10"
-            style={{
-                color: "oklch(var(--color-slate-300) / 0.85)",
-              fontSize: "0.88rem",
-              fontWeight: 500,
-            }}
+            className="px-4 py-2 rounded-xl transition-all hover:bg-white/10 text-slate-300/85 text-[0.88rem] font-medium"
           >
             Masuk
           </Link>
           <Link
             href="/register"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all hover:opacity-90 hover:scale-105"
-            style={{
-              background: "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
-              boxShadow: "0 4px 14px oklch(var(--color-blue-500) / 0.4)",
-              fontSize: "0.88rem",
-              fontWeight: 600,
-            }}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-white transition-all hover:opacity-90 hover:scale-105 bg-linear-to-br from-blue-500 to-blue-700 shadow-[0_4px_14px_rgba(59,130,246,0.4)] text-[0.88rem] font-semibold"
           >
             Mulai Gratis <LuArrowRight size={14} />
           </Link>
         </div>
 
         <button
-          className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg transition-colors hover:bg-white/10"
+          className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg transition-colors hover:bg-white/10 text-slate-300/85"
           onClick={() => setMenuOpen((p) => !p)}
           aria-label="Toggle menu"
-          style={{ color: "oklch(var(--color-slate-300) / 0.85)" }}
         >
           {menuOpen ? <LuX size={20} /> : <LuMenu size={20} />}
         </button>
@@ -120,51 +91,31 @@ export default function LandingNavbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.22 }}
-            className="md:hidden overflow-hidden"
-            style={{
-              backgroundColor: "oklch(var(--ink-900))",
-              borderTop: "1px solid oklch(var(--color-white) / 0.07)",
-            }}
+            className="md:hidden overflow-hidden bg-(--ink-900) border-t border-white/10"
           >
             <div className="px-5 py-4 space-y-1">
               {NAV_LINKS.map(({ label, href }) => (
                 <button
                   key={label}
                   onClick={() => handleAnchor(href)}
-                  className="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-colors hover:bg-white/08"
-                  style={{
-                    color: "oklch(var(--color-slate-300) / 0.85)",
-                    fontSize: "0.9rem",
-                    fontWeight: 500,
-                  }}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-xl transition-colors hover:bg-white/10 text-slate-300/85 text-[0.9rem] font-medium"
                 >
                   {label}
-                  <LuChevronRight size={15} style={{ color: "oklch(var(--color-slate-700))" }} />
+                  <LuChevronRight size={15} className="text-slate-700" />
                 </button>
               ))}
               <div className="pt-3 flex flex-col gap-2">
                 <Link
                   href="/login"
                   onClick={() => setMenuOpen(false)}
-                  className="w-full text-center py-3 rounded-xl transition-all hover:bg-white/10"
-                  style={{
-                    color: "oklch(var(--color-slate-300) / 0.85)",
-                    fontSize: "0.9rem",
-                    fontWeight: 500,
-                    border: "1px solid oklch(var(--color-white) / 0.1)",
-                  }}
+                  className="w-full text-center py-3 rounded-xl transition-all hover:bg-white/10 text-slate-300/85 text-[0.9rem] font-medium border border-white/10"
                 >
                   Masuk
                 </Link>
                 <Link
                   href="/register"
                   onClick={() => setMenuOpen(false)}
-                  className="w-full text-center py-3 rounded-xl text-white transition-all hover:opacity-90"
-                  style={{
-                    background: "linear-gradient(135deg, oklch(var(--color-blue-500)), oklch(var(--color-blue-700)))",
-                    fontSize: "0.9rem",
-                    fontWeight: 600,
-                  }}
+                  className="w-full text-center py-3 rounded-xl text-white transition-all hover:opacity-90 bg-linear-to-br from-blue-500 to-blue-700 text-[0.9rem] font-semibold"
                 >
                   Mulai Gratis — Gratis Selamanya
                 </Link>
