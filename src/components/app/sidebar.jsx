@@ -87,7 +87,7 @@ export default function Sidebar({ children }) {
           className="flex items-center justify-center w-9 h-9 rounded-xl shrink-0"
           style={{ background: 'linear-gradient(135deg, #3B82F6, #1D4ED8)' }}
         >
-          <Image src="/icon.svg" alt="Rekap Resi" width={24} height={24} />
+          <Image src="/icon.svg" alt="Rekap Resi" width={22} height={22} />
         </div>
         {sidebarOpen && (
           <div className="ml-3 overflow-hidden whitespace-nowrap">
