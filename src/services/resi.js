@@ -46,3 +46,21 @@ export async function getResiList() {
 
   return { data, error };
 }
+
+/**
+ * Delete a resi record by id.
+ * @param {string|number} id
+ * @returns {Promise<{ data: Object|null, error: Object|null }>}
+ */
+export async function deleteResi(id) {
+  const supabase = createClient();
+
+  const { data, error } = await supabase
+    .from('resi')
+    .delete()
+    .eq('id', id)
+    .select()
+    .single();
+
+  return { data, error };
+}
