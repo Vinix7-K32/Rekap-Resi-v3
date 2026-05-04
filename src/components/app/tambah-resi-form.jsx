@@ -16,12 +16,7 @@ import {
 
 import { addResi } from '@/services/resi';
 
-import {
-  MdCheckCircleOutline,
-  MdErrorOutline,
-  MdRefresh,
-  MdSaveAlt,
-} from 'react-icons/md';
+import { MdErrorOutline, MdRefresh, MdSaveAlt } from 'react-icons/md';
 
 const MARKETPLACES = ['Shopee', 'Tokopedia', 'Lazada', 'Bukalapak', 'TikTok Shop'];
 const KURIR = ['JNE', 'J&T', 'SiCepat', 'Anteraja', 'Pos Indonesia'];
@@ -29,9 +24,15 @@ const STATUSES = ['Menunggu', 'Dalam Proses', 'Diterima', 'Selesai'];
 
 export default function TambahResiForm() {
   const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
 
-  const today = new Date().toISOString().split('T')[0];
+  const getDefaultValues = () => ({
+    nomor_resi: '',
+    marketplace: '',
+    kurir: '',
+    status: 'Menunggu',
+    tanggal: new Date().toISOString().split('T')[0],
+    nama_penerima: '',
+  });
 
   const {
     register,
@@ -40,10 +41,7 @@ export default function TambahResiForm() {
     control,
     formState: { errors },
   } = useForm({
-    defaultValues: {
-      tanggal: today,
-      status: 'Menunggu',
-    },
+    defaultValues: getDefaultValues(),
   });
 
   const onSubmit = async (data) => {
@@ -55,12 +53,10 @@ export default function TambahResiForm() {
           description: error.message,
         });
       } else {
-        setSuccess(true);
-        reset({ tanggal: today, status: 'Menunggu' });
+        reset(getDefaultValues());
         toast.success('Resi berhasil disimpan!', {
           description: `Nomor resi ${data.nomor_resi} telah ditambahkan.`,
         });
-        setTimeout(() => setSuccess(false), 4000);
       }
     } catch (err) {
       toast.error('Terjadi kesalahan tak terduga');
@@ -78,34 +74,6 @@ export default function TambahResiForm() {
 
   return (
     <div className="space-y-5">
-      <AnimatePresence>
-        {success && (
-          <motion.div
-            key="success-banner"
-            initial={{ opacity: 0, y: -10, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: 'auto' }}
-            exit={{ opacity: 0, y: -10, height: 0 }}
-            className="flex items-center gap-3 px-5 py-4 rounded-2xl overflow-hidden"
-            style={{ backgroundColor: '#F0FDF4', border: '1px solid #BBF7D0' }}
-          >
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-              style={{ backgroundColor: '#DCFCE7' }}
-            >
-              <MdCheckCircleOutline size={22} style={{ color: '#16A34A' }} />
-            </div>
-            <div>
-              <p className="text-green-800 font-semibold" style={{ fontSize: '0.9rem' }}>
-                Resi berhasil ditambahkan!
-              </p>
-              <p className="text-green-600" style={{ fontSize: '0.82rem' }}>
-                Data resi telah disimpan ke database
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         {/* Nomor Resi */}
         <div className="space-y-1.5">
@@ -304,7 +272,7 @@ export default function TambahResiForm() {
 
           <button
             type="button"
-            onClick={() => reset({ tanggal: today, status: 'Menunggu' })}
+            onClick={() => reset(getDefaultValues())}
             className="flex items-center gap-2 px-5 rounded-xl text-slate-600 hover:text-slate-800 hover:bg-slate-100 transition-all cursor-pointer"
             style={{ border: '1px solid #E2E8F0', fontSize: '0.9rem' }}
           >

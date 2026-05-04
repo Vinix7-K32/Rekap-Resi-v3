@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard,
   PackagePlus,
   ArrowLeftRight,
   ClipboardList,
-  Package,
   Bell,
   ChevronLeft,
   ChevronRight,
@@ -87,7 +87,7 @@ export default function Sidebar({ children }) {
           className="flex items-center justify-center w-9 h-9 rounded-xl shrink-0"
           style={{ background: 'linear-gradient(135deg, #3B82F6, #1D4ED8)' }}
         >
-          <Package size={18} className="text-white" />
+          <Image src="/icon.svg" alt="Rekap Resi" width={24} height={24} />
         </div>
         {sidebarOpen && (
           <div className="ml-3 overflow-hidden whitespace-nowrap">
